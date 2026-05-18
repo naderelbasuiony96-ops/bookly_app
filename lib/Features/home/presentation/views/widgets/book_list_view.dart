@@ -12,7 +12,7 @@ class FeaturedBoockListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: CustomListViewItems(),
+            child: FeaturedListViewItems(),
           );
         },
       ),
