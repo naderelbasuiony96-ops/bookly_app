@@ -28,7 +28,8 @@ class BookDetailsBody extends StatelessWidget {
               fontStyle: FontStyle.italic,
             ),
           ),
-          BookRating(),
+          SizedBox(height: 18),
+          BookRating(mainAxisAlignment: MainAxisAlignment.center),
         ],
       ),
     );
