@@ -1,4 +1,5 @@
 import 'package:bookly_app/Features/home/presentation/views/widgets/app_bar_book_details.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_action_button.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly_app/core/utils/styles.dart';
@@ -16,11 +17,11 @@ class BookDetailsBody extends StatelessWidget {
         children: [
           SafeArea(child: AppBarBookDetails()),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * .2),
+            padding: EdgeInsets.symmetric(horizontal: width * .17),
             child: CustomBookImage(),
           ),
           Text('The Jungle Book', style: Styles.textStyle30),
-          SizedBox(height: 6),
+          const SizedBox(height: 6),
           Text(
             'Rudyard Kipling',
             style: Styles.textStyle18.copyWith(
@@ -28,8 +29,10 @@ class BookDetailsBody extends StatelessWidget {
               fontStyle: FontStyle.italic,
             ),
           ),
-          SizedBox(height: 18),
-          BookRating(mainAxisAlignment: MainAxisAlignment.center),
+          const SizedBox(height: 18),
+          const BookRating(mainAxisAlignment: MainAxisAlignment.center),
+          const SizedBox(height: 37),
+          const BookActionButton(),
         ],
       ),
     );
