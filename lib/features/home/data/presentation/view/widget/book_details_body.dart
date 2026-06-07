@@ -1,6 +1,7 @@
-import 'package:bookly_app/features/home/presentation/view/widget/app_bar_book_details.dart';
-import 'package:bookly_app/features/home/presentation/view/widget/book_details_section.dart';
-import 'package:bookly_app/features/home/presentation/view/widget/similar_book_section.dart';
+import 'package:bookly_app/features/home/data/presentation/view/widget/app_bar_book_details.dart';
+import 'package:bookly_app/features/home/data/presentation/view/widget/book_details_section.dart';
+import 'package:bookly_app/features/home/data/presentation/view/widget/similar_book_section.dart';
+
 import 'package:flutter/material.dart';
 
 class BookDetailsBody extends StatelessWidget {

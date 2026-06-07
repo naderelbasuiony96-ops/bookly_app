@@ -6,7 +6,7 @@ class BooklyModel extends Equatable {
   final int? id;
   final String? title;
   final String? subtitle;
-  final String? image;
+  final String image;
   final List<Author>? authors;
   final List<dynamic>? genres;
   final Rating? rating;
@@ -16,7 +16,7 @@ class BooklyModel extends Equatable {
     this.id,
     this.title,
     this.subtitle,
-    this.image,
+    required this.image,
     this.authors,
     this.genres,
     this.rating,
@@ -27,7 +27,7 @@ class BooklyModel extends Equatable {
     id: json['id'] as int?,
     title: json['title'] as String?,
     subtitle: json['subtitle'] as String?,
-    image: json['image'] as String?,
+    image: json['image'] as String,
     authors: (json['authors'] as List<dynamic>?)
         ?.map((e) => Author.fromJson(e as Map<String, dynamic>))
         .toList(),

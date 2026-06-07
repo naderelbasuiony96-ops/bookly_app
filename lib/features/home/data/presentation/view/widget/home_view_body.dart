@@ -1,7 +1,7 @@
 import 'package:bookly_app/core/Utils/styles.dart';
-import 'package:bookly_app/features/home/presentation/view/widget/best_seller_list_view.dart';
-import 'package:bookly_app/features/home/presentation/view/widget/book_list_view.dart';
-import 'package:bookly_app/features/home/presentation/view/widget/custom_app_bar.dart';
+import 'package:bookly_app/features/home/data/presentation/view/widget/best_seller_list_view.dart';
+import 'package:bookly_app/features/home/data/presentation/view/widget/book_list_view.dart';
+import 'package:bookly_app/features/home/data/presentation/view/widget/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {

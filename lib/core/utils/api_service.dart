@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
 class ApiService {
-  final _baseUrl = 'https://api.bigbookapi.com/';
+  final _baseUrl = 'https://api.bigbookapi.com/search-books?';
   final Dio _dio;
   ApiService(this._dio);
 
