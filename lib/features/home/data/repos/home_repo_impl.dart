@@ -3,6 +3,7 @@ import 'package:bookly_app/core/errors/failures.dart';
 import 'package:bookly_app/features/home/data/models/bookly_model/bookly_model.dart';
 import 'package:bookly_app/features/home/data/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiSrevice;
@@ -12,7 +13,7 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BooklyModel>>> fetchBooks() async {
     try {
       var data = await apiSrevice.get(
-        endPoind: 'query=books+about+programming',
+        endPoind: 'search-books?query=books+about+programming',
       );
       List<BooklyModel> books = [];
       for (var item in data['books']) {
@@ -20,7 +21,11 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(books);
     } catch (e) {
-      return left(ServerFailure());
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+
+      return left(ServerFailure(e.toString()));
     }
   }
 
