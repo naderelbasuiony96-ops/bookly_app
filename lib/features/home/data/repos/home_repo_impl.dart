@@ -10,7 +10,7 @@ class HomeRepoImpl implements HomeRepo {
 
   HomeRepoImpl(this.apiSrevice);
   @override
-  Future<Either<Failure, List<BooklyModel>>> fetchBooks() async {
+  Future<Either<Failure, List<BooklyModel>>> fetchBestSellerBooks() async {
     try {
       var data = await apiSrevice.get(
         endPoind: 'search-books?query=books+about+programming',
